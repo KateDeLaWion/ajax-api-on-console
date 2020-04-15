@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script src="app.js"></script> -->
+  </head>
+    <body>
+      <script>
+          const promise = $.ajax({
+              url:'http://www.omdbapi.com/?apikey=53aa2cd6&t=Frozen'
+          });
+
+          promise.then(
+              (data)=>{
+                  console.log(data);
+              },
+              ()=>{
+                  console.log('bad request');
+              }
+          );
+   
+      </script>
+    </body>
+</html>
